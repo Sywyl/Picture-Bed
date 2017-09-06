@@ -12,7 +12,7 @@
 
 > 目前支持：七牛云，阿里云
 > 
-> 演示地址： [https://famio.liew.io](#)
+> 演示地址： [http://yun.penglei.net](#)
 > 
 > GitHub： [https://github.com/souyunku/ymqFM](#)
 
