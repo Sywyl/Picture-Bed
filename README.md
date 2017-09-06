@@ -37,11 +37,11 @@
 ![Wechat：关注公众号](http://www.ymq.io/images/pengleikeji.jpg "鹏磊科技")
 
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index1.png")
+![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index1.png)
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index2.png")
+![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index2.png)
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index3.png")
+![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index3.png)
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index5.png")
+![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index5.png)
 </div>
