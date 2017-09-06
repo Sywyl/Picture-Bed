@@ -1,6 +1,3 @@
-<div class="container kv-main">
-
-<div class="page-header">
 
 # Simple open source image uploads
 
@@ -37,11 +34,12 @@
 ![Wechat：关注公众号](http://www.ymq.io/images/pengleikeji.jpg "鹏磊科技")
 
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index1.png)
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index1.png)
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index2.png)
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index2.png)
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index3.png)
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index3.png)
 
-![](https://raw.githubusercontent.com/souyunku/ymqFM/master/ymqFM/doc/index5.png)
-</div>
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index4.png)
+
+
