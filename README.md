@@ -14,7 +14,7 @@
 > 
 > 演示地址： [https://famio.liew.io](#)
 > 
-> GitHub： [https://git.oschina.net/famio/wocreat](#)
+> GitHub： [https://github.com/souyunku/ymqFM](#)
 
 ### Configuration
 
