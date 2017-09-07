@@ -8,11 +8,22 @@
 > 
 > 演示地址： [http://yun.penglei.net](#)
 > 
-> GitHub： [https://github.com/souyunku/fileManager](#)
+> GitHub： [https://github.com/souyunku/fileManager](https://github.com/souyunku/fileManager)
+
 
 ### Configuration
 
 > #### 使用的时候需要按照`application.properties` 里面的注释配置即可
+
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index1.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index2.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index3.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index4.png)
+
 
 ### Contact
 
