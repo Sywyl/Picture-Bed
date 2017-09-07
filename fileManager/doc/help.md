@@ -17,6 +17,24 @@
 
 > #### 使用的时候需要按照`application.properties` 里面的注释配置即可
 
+
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index1.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index2.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index3.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index4.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index5.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index6.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index7.png)
+
+![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index8.png)
+
 ### Contact
 
 > Email：admin@souyunku.com
@@ -32,14 +50,4 @@
 > Wechat：关注公众号，鹏磊科技
 
 ![Wechat：关注公众号](http://www.ymq.io/images/pengleikeji.jpg "鹏磊科技")
-
-
-![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index1.png)
-
-![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index2.png)
-
-![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index3.png)
-
-![](https://raw.githubusercontent.com/souyunku/fileManager/master/fileManager/doc/index4.png)
-
 
