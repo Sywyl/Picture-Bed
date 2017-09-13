@@ -8,8 +8,9 @@
  * @CreateDate: 2017/9/11 21:07
  **/
 
-function copySuccess() {
-    layer.msg('复制外链成功:', {time: 1000,});
+function copySuccess(e) {
+    //layer.msg('', {time: 1000,});
+    layer.tips('已复制', '#'+e.trigger.id );
 }
 
 function copyError() {
@@ -21,7 +22,7 @@ var btnCopyHtml = new Clipboard('#btnCopyHtml');
 
 btnCopyHtml.on('success', function (e) {
 
-    copySuccess(e.text);
+    copySuccess(e);
 
 });
 
@@ -35,7 +36,7 @@ var btnCopyMarkdown = new Clipboard('#btnCopyMarkdown');
 
 btnCopyMarkdown.on('success', function (e) {
 
-    copySuccess();
+    copySuccess(e);
 });
 
 btnCopyMarkdown.on('error', function (e) {
@@ -48,7 +49,7 @@ var btnCopyMarkdownWithLink = new Clipboard('#btnCopyMarkdownWithLink');
 
 btnCopyMarkdownWithLink.on('success', function (e) {
 
-    copySuccess();
+    copySuccess(e);
 });
 
 btnCopyMarkdownWithLink.on('error', function (e) {
@@ -60,7 +61,7 @@ var btnCopyURL = new Clipboard('#btnCopyURL');
 
 btnCopyURL.on('success', function (e) {
 
-    copySuccess();
+    copySuccess(e);
 });
 
 btnCopyURL.on('error', function (e) {

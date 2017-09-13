@@ -70,9 +70,10 @@
 
 <div class="container kv-main" style="padding-top: 20px ;">
 
-<div>
-   <p><span class="layui-breadcrumb"><a href="index.html">首页</a><a><cite>控制面板</cite></a><a><cite>后台管理</cite></a></span></p>
-</div>
+    <div>
+        <p><span class="layui-breadcrumb"><a
+                href="index.html">首页</a><a><cite>控制面板</cite></a><a><cite>后台管理</cite></a></span></p>
+    </div>
     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
 
         <ul class="layui-tab-title">
@@ -125,19 +126,8 @@
     </div>
 </div>
 
-<script type="text/html" id="barTool">
 
-    <!--数据表格按钮组-->
-    <div class="layui-btn-group">
-        <button class="layui-btn layui-btn-primary layui-btn-mini" lay-event="d_btn_url_link">复制外链</button>
-        <button class="layui-btn layui-btn-primary layui-btn-mini" lay-event="d_btn_download"><i style="color: #01AAED;" class="layui-icon">&#xe601;</i>下载</button>
-        <button class="layui-btn layui-btn-primary layui-btn-mini" lay-event="d_btn_preview"><i style="color: #5FB878;" class="layui-icon">&#xe64a; </i>预览</button>
-    </div>
 
-    <a class="layui-btn layui-btn-normal layui-btn-mini" lay-event="d_btn_edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="d_btn_delete">删除</a>
-
-</script>
 
 <!--layui-->
 <script src="layui/layui.js" charset="utf-8"></script>
@@ -161,60 +151,133 @@
 
 <footer class="footer  bs-docs-footer">
     <div class="container">
-      <div class="row footer-top">
-        <div class="col-sm-6 col-lg-6">
-             <ul class="bs-docs-footer-links">
-            <li><a href="https://github.com/souyunku/file-manager">GitHub 仓库</a>
-            </li>
-            <li><a href="http://www.souyunku.com">实例</a>
-            </li>
-        </ul>
-          <p>本项目源码受 <a rel="license" href="https://github.com/souyunku/file-manager" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护</p>
+        <div class="row footer-top">
+            <div class="col-sm-6 col-lg-6">
+                <ul class="bs-docs-footer-links">
+                    <li><a href="https://github.com/souyunku/file-manager">GitHub 仓库</a>
+                    </li>
+                    <li><a href="http://www.souyunku.com">实例</a>
+                    </li>
+                </ul>
+                <p>本项目源码受 <a rel="license" href="https://github.com/souyunku/file-manager" target="_blank">MIT</a>开源协议保护，文档受
+                    <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>
+                    开源协议保护</p>
+            </div>
+            <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+                <div class="row about">
+                    <div class="col-xs-3">
+                        <h4>关于</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="timeline.html">关于我们</a></li>
+                            <li><a href="timeline.html">友情链接</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <h4>联系方式</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://weibo.com/souyunku" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a>
+                            </li>
+                            <li><a href="mailto:admin@souyunku.com">电子邮件</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <h4>作者博客</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.ymq.io/" target="_blank">PengLei</a></li>
+                            <li><a href="http://sf.gg./blog/penglei" target="_blank">PengLei `Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <h4>赞助作者</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="" target="_blank">微信</a></li>
+                            <li><a href="" target="_blank">支付宝</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="col-sm-6  col-lg-5 col-lg-offset-1">
-          <div class="row about">
-            <div class="col-xs-3">
-              <h4>关于</h4>
-              <ul class="list-unstyled">
-                <li><a href="timeline.html">关于我们</a></li>
-                <li><a href="timeline.html">友情链接</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-3">
-              <h4>联系方式</h4>
-              <ul class="list-unstyled">
-                <li><a href="http://weibo.com/souyunku" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a></li>
-                <li><a href="mailto:admin@souyunku.com">电子邮件</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-3">
-              <h4>作者博客</h4>
-              <ul class="list-unstyled">
-                <li><a href="http://www.ymq.io/" target="_blank">PengLei</a></li>
-				<li><a href="http://sf.gg./blog/penglei" target="_blank">PengLei `Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-3">
-              <h4>赞助作者</h4>
-              <ul class="list-unstyled">
-                <li><a href="" target="_blank">微信</a></li>
-				<li><a href="" target="_blank">支付宝</a></li>
-              </ul>
-            </div>
-          </div>
-  
+        <hr>
+        <div class="row footer-bottom">
+            <ul class="list-inline text-center">
+                <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15060021号-2</a></li>
+            </ul>
         </div>
-      </div>
-      <hr>
-      <div class="row footer-bottom">
-        <ul class="list-inline text-center">
-          <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15060021号-2</a></li>
-        </ul>
-      </div>
     </div>
-  </footer>
+</footer>
 
 
 </body>
+
+
+<script type="text/html" id="copyURLTool">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">HTML</li>
+            <li>Markdown</li>
+            <li>MarkdownWithLink</li>
+            <li>URL</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <input id="copyHtml" type="text" style="width:320px; height:38px;  border: 1px solid #dce3e8;  color: #9d9d9d;" readonly="readonly" />
+                <button style="margin: 10px 10px; border: 1px solid #FF5722; color: #FF5722;  " class="layui-btn layui-btn-primary" data-clipboard-action="copy" data-clipboard-target="#copyHtml" id="btnCopyHtml">复制</button>
+            </div>
+            <div class="layui-tab-item">
+                <input id="copyMarkdown" type="text" style="width:320px; height:38px;  border: 1px solid #dce3e8;  color: #9d9d9d;" readonly="readonly" />
+                <button style="margin: 10px 10px; border: 1px solid #FF5722; color: #FF5722;  " class="layui-btn layui-btn-primary"  data-clipboard-action="copy" data-clipboard-target="#copyMarkdown" id="btnCopyMarkdown">复制</button>
+            </div>
+            <div class="layui-tab-item">
+                <input id="copyMarkdownWithLink" type="text" style="width:320px; height:38px;  border: 1px solid #dce3e8;  color: #9d9d9d;" readonly="readonly" />
+                <button style="margin: 10px 10px; border: 1px solid #FF5722; color: #FF5722;  " class="layui-btn layui-btn-primary"  data-clipboard-action="copy" data-clipboard-target="#copyMarkdownWithLink" id="btnCopyMarkdownWithLink">复制</button>
+            </div>
+            <div class="layui-tab-item">
+                <input id="copyURL" type="text" style="width:320px; height:38px;  border: 1px solid #dce3e8;  color: #9d9d9d;" readonly="readonly" />
+                <button style="margin: 10px 10px; border: 1px solid #FF5722; color: #FF5722; " class="layui-btn layui-btn-primary"  data-clipboard-action="copy" data-clipboard-target="#copyURL" id="btnCopyURL">复制</button>
+            </div>
+        </div>
+    </div>
+
+</script>
+
+
+<script type="text/html" id="barTool">
+    <!--数据表格按钮组-->
+    <div class="layui-btn-group">
+        <button class="layui-btn layui-btn-primary layui-btn-mini" lay-event="d_btn_url_link">复制外链</button>
+        <button class="layui-btn layui-btn-primary layui-btn-mini" lay-event="d_btn_download"><i style="color: #01AAED;" class="layui-icon">&#xe601;</i>下载</button>
+        <button class="layui-btn layui-btn-primary layui-btn-mini" lay-event="d_btn_preview"><i style="color: #5FB878;" class="layui-icon">&#xe64a; </i>预览</button>
+    </div> <a class="layui-btn layui-btn-normal layui-btn-mini" lay-event="d_btn_edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="d_btn_delete">删除</a>
+
+</script>
+
+<script type="text/html" id="updateFormTool">
+
+    <form id="updateForm" class="layui-form" style="padding-top: 10px ;margin: 0 8px; ">
+        <div class="layui-form-item">
+            <input type="hidden" name="imagesId"  />
+            <input type="text" name="name" placeholder="请输入名称"  class="layui-input" />
+        </div>
+        <div class="layui-form-item">
+            <input type="text" name="remark"  placeholder="请输入描述"  class="layui-input" />
+        </div>
+    </form>
+
+</script>
+
+<script type="text/html" id="pinterestTool">
+
+<li name="pinterest"><img src="' + item.url + '" >
+    <div  class="layui-btn-group" style="margin-top: -25px" >
+        <button value= "' + item.imagesId + '" onclick="methodType(this,1)" class="layui-btn layui-btn-primary layui-btn-mini"><i class="layui-icon">&#xe641;</i>复制外链</button>
+        <button value= "' + item.imagesId + '" onclick="p_btn_download(this)"  class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #01AAED;" class="layui-icon">&#xe601;</i>下载</button>
+        <button value= "' + item.imagesId + '" onclick="methodType(this,2)" class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #5FB878;" class="layui-icon">&#xe64a;</i>预览</button>
+
+        <span id= "' + item.imagesId + '" style="display:none;">' + resData + '</span>
+      </div>
+</li>
+</script>
 
 </html>

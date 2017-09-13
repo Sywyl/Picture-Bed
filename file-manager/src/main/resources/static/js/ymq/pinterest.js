@@ -114,11 +114,11 @@ function prependImages(params, pageNum, next, data) {
 
 //瀑布流，下载图片
 function p_btn_download(event) {
-    var url = event.value;
 
-    var data = $("#" + event.value).text();
+    var data = JSON.parse($("#" + event.value).text())
 
-    layer.msg(data);
+    layer.msg('开发中' + data.url, {time: 1000});
+
 }
 
 

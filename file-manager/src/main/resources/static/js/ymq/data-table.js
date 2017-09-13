@@ -95,7 +95,7 @@ function initFilterTool() {
 
         } else if (obj.event === 'd_btn_preview') {
 
-            previewImages(obj.data,2); //预览图片
+            previewImages(obj.data, 2); //预览图片
 
         } else if (obj.event === 'd_btn_delete') {
 
@@ -149,17 +149,7 @@ function updateForm(obj) {
         type: 1,
         closeBtn: 0,
         area: ['400px', '215px'],//宽高
-        content: '<form id="updateForm" class="layui-form" style="padding-top: 10px ;margin: 0 8px; " >'
-        + '<div class="layui-form-item"  >'
-        + '<input type="hidden" name="imagesId" value="' + obj.data.imagesId + '" >'
-        + '<input type="text" name="name" value="' + obj.data.name + '" lay-verify="required" class="layui-input">'
-        + '</div>'
-
-        + '<div class="layui-form-item"  >'
-        + '<input type="text" name="remark" value="' + obj.data.remark + '"  lay-verify="required" class="layui-input">'
-        + '</div>'
-
-        + '</form>'
+        content: $('#updateFormTool').html()
         , btn: ['保存', '取消']
         , yes: function (index, layero) {
             var params = JSON.stringify(serializeForm($("#updateForm")));
@@ -187,7 +177,11 @@ function updateForm(obj) {
         , btn2: function (index, layero) {
             layer.close(index);
         }
-
     });
+
+    $("#imagesId").val(obj.data.imagesId);
+    $("#name").val(obj.data.name);
+    $("#remark").val(obj.data.remark);
+
 
 }

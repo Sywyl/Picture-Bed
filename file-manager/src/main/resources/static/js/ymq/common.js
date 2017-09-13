@@ -38,16 +38,23 @@ layui.use('element', function () {
  */
 function copylink(data) {
 
-    var  htmlContent ='&lt;img src="' + data.url + '" alt="' + data.name + '" title="' + data.name + '" /&gt; ';
-
     layer.open({
         type: 1,
-        area: ['1000px', '293px'],
-        shade: false,
-        title: false,
-        content: '<input id="copyHtml" type="text" value="'+htmlContent+'" />'
-        +'<button style="margin: 10px 10px;" class="layui-btn layui-btn-normal layui-btn-mini" data-clipboard-action="copy" data-clipboard-target="#copyHtml" id="btnCopyHtml" >点击复制：HTML</button>'
+        area: ['446px', '180px'],
+        shadeClose: true,
+        title: "您正在预览外链：" + data.name,
+        content: $('#copyURLTool').html()
     });
+
+    var copyHtmlContent = '<img src="' + data.url + '" alt="' + data.name + '" title="' + data.name + '"/> ';
+    var copyMarkdownContent = '![' + name + '](' + data.url + ')';
+    var copyMarkdownWithLinkContent = '[![' + data.name + '](' + data.url + ')](' + data.url + ')';
+    var copyURLContent = data.url;
+
+    $("#copyHtml").val(copyHtmlContent);
+    $("#copyMarkdown").val(copyMarkdownContent);
+    $("#copyMarkdownWithLink").val(copyMarkdownWithLinkContent);
+    $("#copyURL").val(copyURLContent);
 }
 
 /**
