@@ -52,7 +52,6 @@ public class CloudStorageServiceImpl implements CloudStorageService {
 
         try {
 
-
             String url = "";
 
             ResultModel<CloudStorageConfigPo> cloudStorageConfig = sysConfigService.selectCloudStorageConfig();
@@ -61,7 +60,7 @@ public class CloudStorageServiceImpl implements CloudStorageService {
                 return new ResultModel(cloudStorageConfig.getRetCode(), cloudStorageConfig.getRetMsg(), null);
             }
 
-            url = CloudStorageFactory.build(cloudStorageConfig.getResult()).upload(file.getBytes());
+            url = CloudStorageFactory.build(cloudStorageConfig.getResult()).upload(file);
 
             HashMap<String, Object> resultMap = new HashMap<String, Object>();
             resultMap.put("url", url);
@@ -73,12 +72,12 @@ public class CloudStorageServiceImpl implements CloudStorageService {
 
             ImagesPo.setName(file.getOriginalFilename());
             ImagesPo.setUrl(url);
-            ImagesPo.setWidth( bufferedImage.getWidth());
-            ImagesPo.setHeight( bufferedImage.getHeight());
+            ImagesPo.setWidth(bufferedImage.getWidth());
+            ImagesPo.setHeight(bufferedImage.getHeight());
 
             ResultModel<Integer> count = this.insertImages(ImagesPo);
 
-            LOGGER.info("上传图片入库："+JSONObject.toJSONString(ImagesPo));
+            LOGGER.info("上传图片入库：" + JSONObject.toJSONString(ImagesPo));
 
             resultModel = new ResultModel(StringUtils.isNotBlank(url) == true ? Constant.MessageEnum.SUCCESS.getKey() : Constant.MessageEnum.UPLOAD_FAILURE.getKey(), StringUtils.isNotBlank(url) == true ? Constant.MessageEnum.SUCCESS.getValue() : Constant.MessageEnum.UPLOAD_FAILURE.getValue(), resultMap);
 

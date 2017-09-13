@@ -74,7 +74,7 @@ function previewImages(data) {
     }
     layer.open({
         type: 1,
-        area: [width + "px", (height + 42) + "px"],
+        area: [width +"px", (height + 42) + "px"],
         title: "您正在预览：" + data.name,
         shadeClose: true,
         maxmin: true, //开启最大化最小化按钮

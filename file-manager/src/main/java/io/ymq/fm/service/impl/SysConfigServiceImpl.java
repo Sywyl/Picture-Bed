@@ -28,6 +28,7 @@ public class SysConfigServiceImpl implements SysConfigService {
     private YmqBaseDao ymqBaseDao;
 
 
+
     @Override
     public ResultModel<CloudStorageConfigPo> selectCloudStorageConfig() {
 

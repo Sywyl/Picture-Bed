@@ -31,7 +31,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.html">My upload</a></li>
+                <li><a href="index.html">上传图片</a></li>
 
                 <li><a href="timeline.html">TimeLine</a>
                 </li>
@@ -43,7 +43,7 @@
                                                 aria-haspopup="true" aria-expanded="false">控制面板 <span
                         class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li class="active"><a href="admin.html">后台管理</a>
+                        <li class="active"><a href="admin.html">图片管理</a>
                         </li>
                         <li><a href="oss.html">云存储设置</a>
                         </li>
@@ -55,9 +55,9 @@
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                         aria-haspopup="true" aria-expanded="false">欢迎：鹏磊 <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">个人资料</a>
+                        <li><a href="#">个人资料-开发中</a>
                         </li>
-                        <li><a href="#">修改密码</a>
+                        <li><a href="#">修改密码-开发中</a>
                         </li>
                     </ul>
                 </li>
@@ -72,7 +72,7 @@
 
     <div>
         <p><span class="layui-breadcrumb"><a
-                href="index.html">首页</a><a><cite>控制面板</cite></a><a><cite>后台管理</cite></a></span></p>
+                href="index.html">首页</a><a><cite>控制面板</cite></a><a><cite>图片管理</cite></a></span></p>
     </div>
     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
 
@@ -205,6 +205,8 @@
             </ul>
         </div>
     </div>
+    <!--数据表格下载按钮-->
+    <a id="downloadImages" href="" style="display: none" download=""></a>
 </footer>
 
 
@@ -253,15 +255,16 @@
 
 </script>
 
+
 <script type="text/html" id="updateFormTool">
 
     <form id="updateForm" class="layui-form" style="padding-top: 10px ;margin: 0 8px; ">
         <div class="layui-form-item">
-            <input type="hidden" name="imagesId"  />
-            <input type="text" name="name" placeholder="请输入名称"  class="layui-input" />
+            <input type="hidden" name="imagesId" id= "imagesId" />
+            <input type="text" name="name" id="name" placeholder="请输入名称"  class="layui-input" />
         </div>
         <div class="layui-form-item">
-            <input type="text" name="remark"  placeholder="请输入描述"  class="layui-input" />
+            <input type="text" name="remark"   id="remark"  placeholder="请输入描述"  class="layui-input" />
         </div>
     </form>
 
@@ -269,13 +272,13 @@
 
 <script type="text/html" id="pinterestTool">
 
-<li name="pinterest"><img src="' + item.url + '" >
+<li name="pinterest">
+    <img src="url" >
     <div  class="layui-btn-group" style="margin-top: -25px" >
-        <button value= "' + item.imagesId + '" onclick="methodType(this,1)" class="layui-btn layui-btn-primary layui-btn-mini"><i class="layui-icon">&#xe641;</i>复制外链</button>
-        <button value= "' + item.imagesId + '" onclick="p_btn_download(this)"  class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #01AAED;" class="layui-icon">&#xe601;</i>下载</button>
-        <button value= "' + item.imagesId + '" onclick="methodType(this,2)" class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #5FB878;" class="layui-icon">&#xe64a;</i>预览</button>
-
-        <span id= "' + item.imagesId + '" style="display:none;">' + resData + '</span>
+        <button value= "pinterestImagesId" onclick="methodType(this,1)" class="layui-btn layui-btn-primary layui-btn-mini"><i class="layui-icon">&#xe641;</i>复制外链</button>
+        <a href="url" download="imageName"> <button value= "pinterestImagesId" class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #01AAED;" class="layui-icon">&#xe601;</i>下载</button></a>
+        <button value= "pinterestImagesId" onclick="methodType(this,2)" class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #5FB878;" class="layui-icon">&#xe64a;</i>预览</button>
+        <span id= "pinterestImagesId" style="display:none;">resData</span>
       </div>
 </li>
 </script>

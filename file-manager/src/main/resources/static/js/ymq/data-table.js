@@ -16,7 +16,6 @@
 $('#submitDForm').click(function () {
 
     initTableDate(serializeForm($("#dForm")));
-
 });
 
 
@@ -91,7 +90,8 @@ function initFilterTool() {
 
         } else if (obj.event === 'd_btn_download') {
 
-            layer.msg('开发中' + data.url, {time: 1000});
+            document.getElementById("downloadImages").href = obj.data.url;
+            document.getElementById("downloadImages").click();
 
         } else if (obj.event === 'd_btn_preview') {
 
@@ -137,7 +137,6 @@ function deleteTable(obj) {
         });
     });
 
-
 }
 
 /**
@@ -182,6 +181,5 @@ function updateForm(obj) {
     $("#imagesId").val(obj.data.imagesId);
     $("#name").val(obj.data.name);
     $("#remark").val(obj.data.remark);
-
 
 }

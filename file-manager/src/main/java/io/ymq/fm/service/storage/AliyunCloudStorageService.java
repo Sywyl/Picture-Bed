@@ -3,6 +3,7 @@ package io.ymq.fm.service.storage;
 import com.aliyun.oss.OSSClient;
 
 import io.ymq.fm.model.po.CloudStorageConfigPo;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -42,6 +43,12 @@ public class AliyunCloudStorageService extends AbstractCloudStorage {
 
     public String upload(byte[] data) throws Exception {
         return upload(data, getPath(cloudStorageConfigPo.getAliyunPrefix()));
+    }
+
+    public String upload(MultipartFile data)throws Exception{
+        String filename = data.getOriginalFilename();
+        String suffix = filename.substring(filename.lastIndexOf("."));
+        return upload(data.getBytes(),getPath(cloudStorageConfigPo.getAliyunPrefix(),suffix));
     }
 
 

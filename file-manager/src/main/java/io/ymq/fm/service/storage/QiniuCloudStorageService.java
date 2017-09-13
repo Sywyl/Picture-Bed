@@ -9,6 +9,7 @@ import com.qiniu.util.Auth;
 
 import io.ymq.fm.model.po.CloudStorageConfigPo;
 import org.apache.commons.io.IOUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 
 import java.io.IOException;
@@ -49,6 +50,11 @@ public class QiniuCloudStorageService extends AbstractCloudStorage {
         return cloudStorageConfigPo.getQiniuDomain() + "/" + path;
     }
 
+    public String upload(MultipartFile data)throws Exception{
+        String filename = data.getOriginalFilename();
+        String suffix = filename.substring(filename.lastIndexOf("."));
+        return upload(data.getBytes(),getPath(cloudStorageConfigPo.getAliyunPrefix(),suffix));
+    }
 
     public String upload(InputStream inputStream, String path) throws Exception {
         try {

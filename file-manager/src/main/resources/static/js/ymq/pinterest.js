@@ -33,9 +33,7 @@ layui.use('flow', function () {
  */
 function pinterest(params) {
 
-
     $("#pinterest").css("height", $(window).height() + "px");
-
 
     var flow = layui.flow;
     flow.load({
@@ -80,20 +78,14 @@ function prependImages(params, pageNum, next, data) {
 
     layui.each(data.data, function (index, item) {
 
-        var resData = JSON.stringify(item);
+        var contentHtml = $('#pinterestTool').html();
 
-        listData.push(
-            '<li name="pinterest"><img src="' + item.url + '" >'
-            + '<div  class="layui-btn-group" style="margin-top: -25px" > '
+        contentHtml = contentHtml.replace(/pinterestImagesId/g, item.imagesId);
+        contentHtml = contentHtml.replace(/url/g, item.url);
+        contentHtml = contentHtml.replace(/imageName/g, item.name);
+        contentHtml = contentHtml.replace(/resData/g, JSON.stringify(item));
 
-
-            + '<button value= "' + item.imagesId + '" onclick="methodType(this,1)" class="layui-btn layui-btn-primary layui-btn-mini"><i class="layui-icon">&#xe641;</i>复制外链</button>'
-            + '<button value= "' + item.imagesId + '" onclick="p_btn_download(this)"  class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #01AAED;" class="layui-icon">&#xe601;</i>下载</button>'
-            + '<button value= "' + item.imagesId + '" onclick="methodType(this,2)" class="layui-btn layui-btn-primary layui-btn-mini"><i style="color: #5FB878;" class="layui-icon">&#xe64a;</i>预览</button>'
-
-            + '<span id= "' + item.imagesId + '" style="display:none;">' + resData + '</span>'
-            + '</div></li>'
-        )
+        listData.push(contentHtml);
     });
 
     var pageCount = data.count / 8;
@@ -102,6 +94,7 @@ function prependImages(params, pageNum, next, data) {
         pageCount = 1
     }
     if (params != null) {
+
         $("#pinterest").prepend(listData.join(''));
 
         next(null, pageNum < pageCount);
@@ -111,17 +104,6 @@ function prependImages(params, pageNum, next, data) {
 
 }
 
-
-//瀑布流，下载图片
-function p_btn_download(event) {
-
-    var data = JSON.parse($("#" + event.value).text())
-
-    layer.msg('开发中' + data.url, {time: 1000});
-
-}
-
-
 /**
  * 根据类型调用方法
  * @param obj
@@ -129,7 +111,7 @@ function p_btn_download(event) {
  */
 function methodType(obj, type) {
 
-    var data = JSON.parse($("#" + obj.value).text());
+    var data = JSON.parse($('#' + obj.value).text());
 
     if (type == 1) {
 

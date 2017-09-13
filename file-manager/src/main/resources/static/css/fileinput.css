@@ -356,8 +356,8 @@
     background-color: #f0f0f0;
 }
 
-.file-uploading {
-    background: url('../img/loading-sm.gif') no-repeat center bottom 10px;
+. {
+    background: url('../img/loading-background.gif') no-repeat center bottom 10px;
     opacity: 0.65;
 }
 
