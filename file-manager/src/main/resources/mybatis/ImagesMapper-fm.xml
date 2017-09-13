@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="io.ymq.fm.model.po.ImagesPo">
+
+
+    <resultMap id="BaseResultMapFM" type="io.ymq.fm.model.dto.ImagesDTO">
+        <id column="images_id" property="imagesId"/>
+        <result column="name" property="name"/>
+        <result column="width" property="width"/>
+        <result column="height" property="height"/>
+        <result column="url" property="url"/>
+        <result column="remark" property="remark"/>
+        <result column="screate_time" property="screateTime" />
+        <result column="supdate_time" property="supdateTime" />
+
+    </resultMap>
+
+
+    <sql id="Base_Column_FM">
+        images_id,
+		name,
+		width,
+		height,
+		url,
+		remark,
+		screate_time,
+		supdate_time
+    </sql>
+
+
+    <!--图片列表-->
+    <select id="selectImagesList" parameterType="io.ymq.fm.model.po.ImagesPo" resultMap="BaseResultMapFM">
+
+        SELECT
+        <include refid="Base_Column_FM"/>
+        FROM
+        <include refid="Table_Name"/>
+
+        <where>
+
+            <if test="name!= null  and name!=''  ">
+                name LIKE CONCAT(CONCAT('%',TRIM( #{name})), '%')
+            </if>
+
+            <if test="remark != null and remark!=''  and  name!= null  and name!=''  ">
+                OR
+            </if>
+
+            <if test="remark != null and remark!='' ">
+                remark LIKE CONCAT(CONCAT('%', TRIM( #{remark})), '%')
+            </if>
+
+        </where>
+
+    </select>
+
+
+    <update id="updateImages" parameterType="io.ymq.fm.model.po.ImagesPo">
+        update
+        <include refid="Table_Name"/>
+        <set>
+            <if test="name != null">
+                name= TRIM(#{name}),
+            </if>
+            <if test="remark != null">
+                remark=TRIM(#{remark}),
+            </if>
+        </set>
+        <where>
+            images_id=#{imagesId}
+        </where>
+    </update>
+
+    <!--通过ID查询图片-->
+    <select id="selectById" parameterType="io.ymq.fm.model.po.ImagesPo" resultMap="BaseResultMapFM">
+
+        SELECT
+        <include refid="Base_Column_FM"/>
+        FROM
+        <include refid="Table_Name"/>
+
+        <where>
+            images_id=#{imagesId}
+        </where>
+
+    </select>
+
+
+</mapper>

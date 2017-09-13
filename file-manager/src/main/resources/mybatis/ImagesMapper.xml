@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.ymq.fm.model.po.ImagesPo">
+	<resultMap id="BaseResultMap" type="io.ymq.fm.model.po.ImagesPo">
+		<id column="images_id" property="imagesId" />
+		<result column="name" property="name" />
+		<result column="width" property="width" />
+		<result column="height" property="height" />
+		<result column="url" property="url" />
+		<result column="remark" property="remark" />
+		<result column="status" property="status" />
+		<result column="del_flag" property="delFlag" />
+		<result column="create_user" property="createUser" />
+		<result column="update_user" property="updateUser" />
+		<result column="screate_time" property="screateTime" />
+		<result column="supdate_time" property="supdateTime" />
+	</resultMap>
+
+	<sql id="Table_Name">
+		images
+	</sql>
+
+	<sql id="Base_Column">
+		images_id,
+		name,
+		width,
+		height,
+		url,
+		remark,
+		status,
+		del_flag,
+		create_user,
+		update_user,
+		screate_time,
+		supdate_time
+	</sql>
+
+	<sql id="Base_Where">
+		<trim suffixOverrides="AND">
+		<if test="imagesId != null">
+			images_id= #{imagesId}
+	           AND 
+		</if>
+		<if test="name != null">
+			name= #{name}
+	           AND 
+		</if>
+		<if test="width != null">
+			width= #{width}
+	           AND 
+		</if>
+		<if test="height != null">
+			height= #{height}
+	           AND 
+		</if>
+		<if test="url != null">
+			url= #{url}
+	           AND 
+		</if>
+		<if test="remark != null">
+			remark= #{remark}
+	           AND 
+		</if>
+		<if test="status != null">
+			status= #{status}
+	           AND 
+		</if>
+		<if test="delFlag != null">
+			del_flag= #{delFlag}
+	           AND 
+		</if>
+		<if test="createUser != null">
+			create_user= #{createUser}
+	           AND 
+		</if>
+		<if test="updateUser != null">
+			update_user= #{updateUser}
+	           AND 
+		</if>
+		<if test="screateTime != null">
+			screate_time= #{screateTime}
+	           AND 
+		</if>
+		<if test="supdateTime != null">
+			supdate_time= #{supdateTime}
+		</if>
+		</trim>
+	</sql>
+	
+    <sql id="Base_Select">
+			select
+		<include refid="Base_Column" />
+		from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</sql>
+
+
+
+	<insert id="insert" parameterType="io.ymq.fm.model.po.ImagesPo" useGeneratedKeys="true" keyProperty="imagesId">
+		insert into
+		<include refid="Table_Name" />
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+	<if test="imagesId != null">
+		images_id,
+	</if>
+	<if test="name != null">
+		name,
+	</if>
+	<if test="width != null">
+		width,
+	</if>
+	<if test="height != null">
+		height,
+	</if>
+	<if test="url != null">
+		url,
+	</if>
+	<if test="remark != null">
+		remark,
+	</if>
+	<if test="status != null">
+		status,
+	</if>
+	<if test="delFlag != null">
+		del_flag,
+	</if>
+	<if test="createUser != null">
+		create_user,
+	</if>
+	<if test="updateUser != null">
+		update_user,
+	</if>
+	<if test="screateTime != null">
+		screate_time,
+	</if>
+	<if test="supdateTime != null">
+		supdate_time,
+	</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+	<if test="imagesId != null">
+		#{imagesId},
+	</if>
+	<if test="name != null">
+		#{name},
+	</if>
+	<if test="width != null">
+		#{width},
+	</if>
+	<if test="height != null">
+		#{height},
+	</if>
+	<if test="url != null">
+		#{url},
+	</if>
+	<if test="remark != null">
+		#{remark},
+	</if>
+	<if test="status != null">
+		#{status},
+	</if>
+	<if test="delFlag != null">
+		#{delFlag},
+	</if>
+	<if test="createUser != null">
+		#{createUser},
+	</if>
+	<if test="updateUser != null">
+		#{updateUser},
+	</if>
+	<if test="screateTime != null">
+		#{screateTime},
+	</if>
+	<if test="supdateTime != null">
+		#{supdateTime},
+	</if>
+		</trim>
+	</insert>
+	
+	<insert id="insertList" parameterType="java.util.List" >
+	    /*!mycat:catlet=demo.catlets.BatchInsertSequence */
+	    insert into 
+		<include refid="Table_Name" />
+			(	
+
+					name
+			           ,
+
+					width
+			           ,
+
+					height
+			           ,
+
+					url
+			           ,
+
+					remark
+			           ,
+
+					status
+			           ,
+
+					del_flag
+			           ,
+
+					create_user
+			           ,
+
+					update_user
+			           ,
+
+					screate_time
+			           ,
+
+					supdate_time
+			) 
+	    values
+	    <foreach collection="list" item="item" separator=",">
+			(	
+
+						#{item.name}
+				           ,
+
+						#{item.width}
+				           ,
+
+						#{item.height}
+				           ,
+
+						#{item.url}
+				           ,
+
+						#{item.remark}
+				           ,
+
+						#{item.status}
+				           ,
+
+						#{item.delFlag}
+				           ,
+
+						#{item.createUser}
+				           ,
+
+						#{item.updateUser}
+				           ,
+
+						#{item.screateTime}
+				           ,
+
+						#{item.supdateTime}
+			)
+	    </foreach>
+	 </insert>
+
+	<update id="update" parameterType="io.ymq.fm.model.po.ImagesPo">
+		update
+		<include refid="Table_Name" />
+		<set>
+	<if test="imagesId != null">
+		images_id=#{imagesId},
+	</if>
+	<if test="name != null">
+		name=#{name},
+	</if>
+	<if test="width != null">
+		width=#{width},
+	</if>
+	<if test="height != null">
+		height=#{height},
+	</if>
+	<if test="url != null">
+		url=#{url},
+	</if>
+	<if test="remark != null">
+		remark=#{remark},
+	</if>
+	<if test="status != null">
+		status=#{status},
+	</if>
+	<if test="delFlag != null">
+		del_flag=#{delFlag},
+	</if>
+	<if test="createUser != null">
+		create_user=#{createUser},
+	</if>
+	<if test="updateUser != null">
+		update_user=#{updateUser},
+	</if>
+	<if test="screateTime != null">
+		screate_time=#{screateTime},
+	</if>
+	<if test="supdateTime != null">
+		supdate_time=#{supdateTime},
+	</if>
+		</set>
+		where 
+			      images_id=#{imagesId}
+	</update>
+
+	<update id="updateByEntity" parameterType="io.ymq.fm.model.po.ImagesPo">
+		UPDATE
+		<include refid="Table_Name" />
+		<set>
+			<if test="s.name != null">
+                    name=#{s.name},
+			</if>
+			<if test="s.width != null">
+                    width=#{s.width},
+			</if>
+			<if test="s.height != null">
+                    height=#{s.height},
+			</if>
+			<if test="s.url != null">
+                    url=#{s.url},
+			</if>
+			<if test="s.remark != null">
+                    remark=#{s.remark},
+			</if>
+			<if test="s.status != null">
+                    status=#{s.status},
+			</if>
+			<if test="s.delFlag != null">
+                    del_flag=#{s.delFlag},
+			</if>
+			<if test="s.createUser != null">
+                    create_user=#{s.createUser},
+			</if>
+			<if test="s.updateUser != null">
+                    update_user=#{s.updateUser},
+			</if>
+			<if test="s.screateTime != null">
+                    screate_time=#{s.screateTime},
+			</if>
+			<if test="s.supdateTime != null">
+                    supdate_time=#{s.supdateTime}
+			</if>
+		</set>
+		<where> 
+			<trim prefix="(" suffix=")" suffixOverrides="AND">
+			<if test="w.imagesId != null">
+                    images_id=#{w.imagesId}
+	                   AND 
+ 			</if>
+			<if test="w.name != null">
+                    name=#{w.name}
+	                   AND 
+ 			</if>
+			<if test="w.width != null">
+                    width=#{w.width}
+	                   AND 
+ 			</if>
+			<if test="w.height != null">
+                    height=#{w.height}
+	                   AND 
+ 			</if>
+			<if test="w.url != null">
+                    url=#{w.url}
+	                   AND 
+ 			</if>
+			<if test="w.remark != null">
+                    remark=#{w.remark}
+	                   AND 
+ 			</if>
+			<if test="w.status != null">
+                    status=#{w.status}
+	                   AND 
+ 			</if>
+			<if test="w.delFlag != null">
+                    del_flag=#{w.delFlag}
+	                   AND 
+ 			</if>
+			<if test="w.createUser != null">
+                    create_user=#{w.createUser}
+	                   AND 
+ 			</if>
+			<if test="w.updateUser != null">
+                    update_user=#{w.updateUser}
+	                   AND 
+ 			</if>
+			<if test="w.screateTime != null">
+                    screate_time=#{w.screateTime}
+	                   AND 
+ 			</if>
+			<if test="w.supdateTime != null">
+                    supdate_time=#{w.supdateTime}
+ 			</if>
+			</trim>
+		</where>
+	</update>
+
+	<delete id="delete" parameterType="io.ymq.fm.model.po.ImagesPo">
+		delete from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</delete>
+
+	<select id="count" parameterType="java.util.Map" resultType="int">
+		select count(1) from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</select>
+
+	<select id="selectOne" parameterType="io.ymq.fm.model.po.ImagesPo" resultMap="BaseResultMap">
+	  <include refid="Base_Select" />
+	</select>
+
+	<select id="selectList"  parameterType="io.ymq.fm.model.po.ImagesPo" resultMap="BaseResultMap">
+	    <include refid="Base_Select" />
+	</select>
+		
+
+     <select id="selectForUpdate" parameterType="io.ymq.fm.model.po.ImagesPo" resultMap="BaseResultMap" useCache="false">
+		 <include refid="Base_Select" />
+		for update
+	</select>
+	
+
+</mapper>

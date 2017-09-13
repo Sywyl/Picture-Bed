@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.ymq.fm.model.po.SysConfigPo">
+
+
+
+	<select id="selectSysConfigList"  parameterType="io.ymq.fm.model.po.SysConfigPo" resultMap="BaseResultMap">
+		<include refid="Base_Column" />
+
+		FROM
+		<include refid="Table_Name"/>
+
+		<where>
+			key=#{key}
+		</where>
+
+	</select>
+
+
+
+</mapper>

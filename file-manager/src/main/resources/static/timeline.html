@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- release v4.4.4, copyright 2014 - 2017 Kartik Visweswaran -->
+<!--suppress JSUnresolvedLibraryURL -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>开源图床</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link href="css/ymq/footer.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="layui/layui.js" charset="utf-8"></script>
+</head>
+
+
+<body style="padding-top: 50px">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse ">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">开源图床</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">My upload</a></li>
+
+                <li class="active"><a href="timeline.html">TimeLine</a>
+                </li>
+                <li><a href="http://www.ymq.io">Blog</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-inverse">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">控制面板 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin.html">后台管理</a>
+                        </li>
+                        <li><a href="oss.html">云存储设置</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">更多功能,内测中</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">欢迎：鹏磊 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人资料</a>
+                        </li>
+                        <li><a href="#">修改密码</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container kv-main" style="margin-top: 20px;">
+
+	<span class="layui-breadcrumb">
+		<a href="index.html">首页</a> 
+		<a><cite>TimeLine</cite></a>
+	</span>
+	
+	<br/><br/>
+ 
+    <fieldset>
+	
+        <h1 style=" font-size: 20px; margin-top: 10px; ">使用说明</h1>
+        <hr class="layui-bg-red">
+    </fieldset>
+    <ul class="layui-timeline">
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe614;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">Configuration</h3>
+                <p>目前支持：七牛云，阿里云</p>
+                <ul>
+                    <li>演示地址：<a href="#">http://www.penglei.net</a></li>
+                    <li>GitHub：<a href="https://github.com/souyunku/file-manager">https://github.com/souyunku/file-manager</a>
+                    </li>
+                    <li>使用的时候需要按照<code>application.properties </code>里面的注释配置即可</li>
+                    <li>启动访问:<code>http://127.0.0.1/</code></li><br/>
+					<li>本项目源码受 <a rel="license" href="https://github.com/souyunku/file-manager" target="_blank">MIT</a>开源协议保护，文档受 <a
+                rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护</li>
+                </ul>
+
+            </div>
+        </li>
+    </ul>
+
+    <fieldset>
+        <h1 style=" font-size: 20px; margin-top: 10px; ">开发日志</h1>
+        <hr class="layui-bg-red">
+    </fieldset>
+
+    <ul class="layui-timeline">
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe616;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">9月10日</h3>
+                <p>周末也没闲下来，搭建完整的，系统架构，除了下载，云存储配置，没实现，其他功能完成80%，截止今天，是我除了工作中，业余时间学习，之外占用我我一周业余时间最长的项目之一</p>
+                <ul>
+                    <li>不枉近一周日日夜夜与之为伴。因小而大，因弱而强</li>
+                    <li>无论它能走多远，至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">9月8日</h3>
+                <p>只有一个上传首页的，图床，功能不太完善，开始写后台管理：完成以下</p>
+                <ul>
+                    <li>瀑布流，数据表格，点击复制外链，预览，下载，增删改</li>
+                </ul>
+            </div>
+        </li>
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">9月7日</h3>
+                <p>经过两天的折腾，基于Spring Boot 写一个只有一个首页的简单图床诞生了，支持，七牛云，阿里云，就在今天我把它开源了</p>
+            </div>
+        </li>
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">9月4日</h3>
+                <p>前端技术选型，看了看，Vue.js ，AngularJS ，需要学习时间，时间紧啊，最后选择，<a href="http://www.layui.com/">Layui</a> <em>“主要是，拿来即用，文档也比较丰富”</em>
+                </p>
+                <ul>
+                    <li>感谢 作者：贤心！ 开源 <a href="https://github.com/sentsin/layui/">Layui</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">9月3日</h3>
+                <p>今天周日，在 逛了好久GitHub，就为了找一款，满意的jQuery上传组件
+                    <br>本来想用 <a href="https://github.com/blueimp/jQuery-File-Upload">jQuery File Upload Plugin </a>但是后来被我发现：<a
+                            href="https://github.com/kartik-v/bootstrap-fileinput/">Bootstrap File Input</a> 更适合我
+                    <br>
+                <ul>
+                    <li>感谢 作者：Krajee！ 开源 <a href="https://github.com/kartik-v/bootstrap-fileinput/">Bootstrap File
+                        Input</a>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </li>
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <div class="layui-timeline-title">准备开发</div>
+            </div>
+        </li>
+    </ul>
+    <fieldset>
+        <h1 style=" font-size: 20px; ">开发背景</h1>
+        <hr class="layui-bg-red">
+    </fieldset>
+    <ul class="layui-timeline">
+        <li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis"></i>
+            <div class="layui-timeline-content layui-text">
+                <div class="layui-timeline-title">2017年9月2，心血来潮，从网上找了很久开源图床，但是没有自己满意的，之后就诞生此开源图床</div>
+            </div>
+        </li>
+        <li class="layui-timeline-item"><i
+                class="layui-icon layui-anim layui-anim-rotate layui-anim-loop layui-timeline-axis"></i>
+            <div class="layui-timeline-content layui-text">
+                <div class="layui-timeline-title">更久前，自己写 Markdown
+                    笔记，笔记图片管理一直是我很头疼的事情，网上也有一些免费的图床，但是怕丢资源，一直也没用，总想着时间自己写一个图床
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--通用的组件-->
+<script src="js/ymq/common.js" charset="utf-8"></script>
+
+<footer class="footer  bs-docs-footer">
+    <div class="container">
+      <div class="row footer-top">
+        <div class="col-sm-6 col-lg-6">
+             <ul class="bs-docs-footer-links">
+            <li><a href="https://github.com/souyunku/file-manager">GitHub 仓库</a>
+            </li>
+            <li><a href="http://www.souyunku.com">实例</a>
+            </li>
+        </ul>
+          <p>本项目源码受 <a rel="license" href="https://github.com/souyunku/file-manager" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护</p>
+        </div>
+        <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+          <div class="row about">
+            <div class="col-xs-3">
+              <h4>关于</h4>
+              <ul class="list-unstyled">
+                <li><a href="timeline.html">关于我们</a></li>
+                <li><a href="timeline.html">友情链接</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-3">
+              <h4>联系方式</h4>
+              <ul class="list-unstyled">
+                <li><a href="http://weibo.com/souyunku" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a></li>
+                <li><a href="mailto:admin@souyunku.com">电子邮件</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-3">
+              <h4>作者博客</h4>
+              <ul class="list-unstyled">
+                <li><a href="http://www.ymq.io/" target="_blank">PengLei</a></li>
+				<li><a href="http://sf.gg./blog/penglei" target="_blank">PengLei `Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-3">
+              <h4>赞助作者</h4>
+              <ul class="list-unstyled">
+                <li><a href="" target="_blank">微信</a></li>
+				<li><a href="" target="_blank">支付宝</a></li>
+              </ul>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <hr>
+      <div class="row footer-bottom">
+        <ul class="list-inline text-center">
+          <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15060021号-2</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

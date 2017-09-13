@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- release v4.4.4, copyright 2014 - 2017 Kartik Visweswaran -->
+<!--suppress JSUnresolvedLibraryURL -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>开源图床</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link href="css/ymq/footer.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body style="padding-top: 50px">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse ">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" href="index.html">开源图床</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">My upload</a>
+                </li>
+                <li><a href="timeline.html">TimeLine</a>
+                </li>
+                <li><a href="http://www.ymq.io">Blog</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-inverse">
+                <li class="dropdown active "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">控制面板 <span
+                        class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin.html">后台管理</a>
+                        </li>
+                        <li class="active "><a href="oss.html">云存储设置</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">更多功能,内测中</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎：鹏磊 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人资料</a>
+                        </li>
+                        <li><a href="#">修改密码</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form id="formCloudStorage">
+    <div class="container kv-main" style="margin-top: 20px;">
+        <div>
+            <p><span class="layui-breadcrumb"><a href="index.html">首页</a> <a><cite>控制面板</cite></a><a><cite>云存储设置</cite></a></span>
+            </p>
+        </div>
+        <hr class="layui-bg-black">
+        <div class="layui-form" id="storageType">
+            <div class="layui-inline">
+                <label class="layui-form-label" style="width: 140px; margin: 0px   -20px; ">默认云存储类型:</label>
+                <div class="layui-input-block" style="margin-left: 140px; margin-left: 120px;">
+                    <input type="radio" name="storageType" value="QINIUYUN" title="七牛云" checked="">
+                    <input type="radio" name="storageType" value="ALIYUN" title="阿里云">
+                    <button class=" layui-btn layui-btn-small layui-btn-normal " lay-submit="" lay-filter="saveBtnCloudStorageType">设为默认</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin: 0px;">
+            <ul class="layui-tab-title">
+                <li class="layui-this">七牛云<span class="layui-badge">推荐</span>
+                </li>
+                <li>阿里云</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <div>	<strong>提示:</strong> &nbsp; 免费申请(七牛) <span class="layui-badge">10G</span>存储空间 <span class="layui-badge"> <a href="#" style="color:#fff;">马上注册</a></span>  <span class="layui-badge layui-bg-blue"><a href="#" style="color:#fff;">查看帮助</a></span>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="layui-form layui-form-pane">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">域名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="qiniuDomain" autocomplete="off" placeholder="七牛绑定的域名" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">路径前缀</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="qiniuPrefix" autocomplete="off" placeholder="不设置默认为空" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">AccessKey</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="qiniuAccessKey" autocomplete="off" placeholder="七牛AccessKey" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">SecretKey</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="qiniuSecretKey" autocomplete="off" placeholder="七牛SecretKey" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">空间名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="qiniuBucketName" autocomplete="off" placeholder="七牛SecretKey" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="saveBtnCloudStorage">保存配置</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <div class="layui-form layui-form-pane">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">域名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="aliyunDomain" autocomplete="off" placeholder="阿里云绑定的域名" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">路径前缀</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="aliyunPrefix" autocomplete="off" placeholder="不设置默认为空" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">EndPoint</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="aliyunEndPoint" autocomplete="off" placeholder="阿里云EndPoint" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">AccessKeyId</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="aliyunAccessKeyId" autocomplete="off" placeholder="阿里云AccessKeyId" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">AccessKeySecret</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="aliyunAccessKeySecret" autocomplete="off" placeholder="阿里云AccessKeySecret" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">BucketName</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="aliyunBucketName" autocomplete="off" placeholder="阿里云BucketName" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="saveBtnCloudStorage">保存配置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<footer class="footer  bs-docs-footer">
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-sm-6 col-lg-6">
+                <ul class="bs-docs-footer-links">
+                    <li><a href="https://github.com/souyunku/file-manager">GitHub 仓库</a>
+                    </li>
+                    <li><a href="http://www.souyunku.com">实例</a>
+                    </li>
+                </ul>
+                <p>本项目源码受 <a rel="license" href="https://github.com/souyunku/file-manager" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护</p>
+            </div>
+            <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+                <div class="row about">
+                    <div class="col-xs-3">
+                        <h4>关于</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="timeline.html">关于我们</a>
+                            </li>
+                            <li><a href="timeline.html">友情链接</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <h4>联系方式</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://weibo.com/souyunku" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a>
+                            </li>
+                            <li><a href="mailto:admin@souyunku.com">电子邮件</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <h4>作者博客</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.ymq.io/" target="_blank">PengLei</a>
+                            </li>
+                            <li><a href="http://sf.gg./blog/penglei" target="_blank">PengLei `Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <h4>赞助作者</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="" target="_blank">微信</a>
+                            </li>
+                            <li><a href="" target="_blank">支付宝</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row footer-bottom">
+            <ul class="list-inline text-center">
+                <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15060021号-2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!--layui-->
+<script src="layui/layui.js" charset="utf-8"></script>
+<!--通用的组件-->
+<script src="js/ymq/common.js" charset="utf-8"></script>
+<!--云存储-->
+<script src="js/ymq/oss.js" charset="utf-8"></script>
+</body>
+
+</html>

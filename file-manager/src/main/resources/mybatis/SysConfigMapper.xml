@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.ymq.fm.model.po.SysConfigPo">
+	<resultMap id="BaseResultMap" type="io.ymq.fm.model.po.SysConfigPo">
+		<id column="config_id" property="configId" />
+		<result column="config_key" property="configKey" />
+		<result column="config_value" property="configValue" />
+		<result column="remark" property="remark" />
+		<result column="status" property="status" />
+		<result column="del_flag" property="delFlag" />
+		<result column="create_user" property="createUser" />
+		<result column="update_user" property="updateUser" />
+		<result column="screate_time" property="screateTime" />
+		<result column="supdate_time" property="supdateTime" />
+	</resultMap>
+
+	<sql id="Table_Name">
+		sys_config
+	</sql>
+
+	<sql id="Base_Column">
+		config_id,
+		config_key,
+		config_value,
+		remark,
+		status,
+		del_flag,
+		create_user,
+		update_user,
+		screate_time,
+		supdate_time
+	</sql>
+
+	<sql id="Base_Where">
+		<trim suffixOverrides="AND">
+		<if test="configId != null">
+			config_id= #{configId}
+	           AND 
+		</if>
+		<if test="configKey != null">
+			config_key= #{configKey}
+	           AND 
+		</if>
+		<if test="configValue != null">
+			config_value= #{configValue}
+	           AND 
+		</if>
+		<if test="remark != null">
+			remark= #{remark}
+	           AND 
+		</if>
+		<if test="status != null">
+			status= #{status}
+	           AND 
+		</if>
+		<if test="delFlag != null">
+			del_flag= #{delFlag}
+	           AND 
+		</if>
+		<if test="createUser != null">
+			create_user= #{createUser}
+	           AND 
+		</if>
+		<if test="updateUser != null">
+			update_user= #{updateUser}
+	           AND 
+		</if>
+		<if test="screateTime != null">
+			screate_time= #{screateTime}
+	           AND 
+		</if>
+		<if test="supdateTime != null">
+			supdate_time= #{supdateTime}
+		</if>
+		</trim>
+	</sql>
+	
+    <sql id="Base_Select">
+			select
+		<include refid="Base_Column" />
+		from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</sql>
+
+
+
+	<insert id="insert" parameterType="io.ymq.fm.model.po.SysConfigPo" useGeneratedKeys="true" keyProperty="configId">
+		insert into
+		<include refid="Table_Name" />
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+	<if test="configId != null">
+		config_id,
+	</if>
+	<if test="configKey != null">
+		config_key,
+	</if>
+	<if test="configValue != null">
+		config_value,
+	</if>
+	<if test="remark != null">
+		remark,
+	</if>
+	<if test="status != null">
+		status,
+	</if>
+	<if test="delFlag != null">
+		del_flag,
+	</if>
+	<if test="createUser != null">
+		create_user,
+	</if>
+	<if test="updateUser != null">
+		update_user,
+	</if>
+	<if test="screateTime != null">
+		screate_time,
+	</if>
+	<if test="supdateTime != null">
+		supdate_time,
+	</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+	<if test="configId != null">
+		#{configId},
+	</if>
+	<if test="configKey != null">
+		#{configKey},
+	</if>
+	<if test="configValue != null">
+		#{configValue},
+	</if>
+	<if test="remark != null">
+		#{remark},
+	</if>
+	<if test="status != null">
+		#{status},
+	</if>
+	<if test="delFlag != null">
+		#{delFlag},
+	</if>
+	<if test="createUser != null">
+		#{createUser},
+	</if>
+	<if test="updateUser != null">
+		#{updateUser},
+	</if>
+	<if test="screateTime != null">
+		#{screateTime},
+	</if>
+	<if test="supdateTime != null">
+		#{supdateTime},
+	</if>
+		</trim>
+	</insert>
+	
+	<insert id="insertList" parameterType="java.util.List" >
+	    /*!mycat:catlet=demo.catlets.BatchInsertSequence */
+	    insert into 
+		<include refid="Table_Name" />
+			(	
+
+					config_key
+			           ,
+
+					config_value
+			           ,
+
+					remark
+			           ,
+
+					status
+			           ,
+
+					del_flag
+			           ,
+
+					create_user
+			           ,
+
+					update_user
+			           ,
+
+					screate_time
+			           ,
+
+					supdate_time
+			) 
+	    values
+	    <foreach collection="list" item="item" separator=",">
+			(	
+
+						#{item.configKey}
+				           ,
+
+						#{item.configValue}
+				           ,
+
+						#{item.remark}
+				           ,
+
+						#{item.status}
+				           ,
+
+						#{item.delFlag}
+				           ,
+
+						#{item.createUser}
+				           ,
+
+						#{item.updateUser}
+				           ,
+
+						#{item.screateTime}
+				           ,
+
+						#{item.supdateTime}
+			)
+	    </foreach>
+	 </insert>
+
+	<update id="update" parameterType="io.ymq.fm.model.po.SysConfigPo">
+		update
+		<include refid="Table_Name" />
+		<set>
+	<if test="configId != null">
+		config_id=#{configId},
+	</if>
+	<if test="configKey != null">
+		config_key=#{configKey},
+	</if>
+	<if test="configValue != null">
+		config_value=#{configValue},
+	</if>
+	<if test="remark != null">
+		remark=#{remark},
+	</if>
+	<if test="status != null">
+		status=#{status},
+	</if>
+	<if test="delFlag != null">
+		del_flag=#{delFlag},
+	</if>
+	<if test="createUser != null">
+		create_user=#{createUser},
+	</if>
+	<if test="updateUser != null">
+		update_user=#{updateUser},
+	</if>
+	<if test="screateTime != null">
+		screate_time=#{screateTime},
+	</if>
+	<if test="supdateTime != null">
+		supdate_time=#{supdateTime},
+	</if>
+		</set>
+		where 
+			      config_id=#{configId}
+	</update>
+
+	<update id="updateByEntity" parameterType="io.ymq.fm.model.po.SysConfigPo">
+		UPDATE
+		<include refid="Table_Name" />
+		<set>
+			<if test="s.configKey != null">
+                    config_key=#{s.configKey},
+			</if>
+			<if test="s.configValue != null">
+                    config_value=#{s.configValue},
+			</if>
+			<if test="s.remark != null">
+                    remark=#{s.remark},
+			</if>
+			<if test="s.status != null">
+                    status=#{s.status},
+			</if>
+			<if test="s.delFlag != null">
+                    del_flag=#{s.delFlag},
+			</if>
+			<if test="s.createUser != null">
+                    create_user=#{s.createUser},
+			</if>
+			<if test="s.updateUser != null">
+                    update_user=#{s.updateUser},
+			</if>
+			<if test="s.screateTime != null">
+                    screate_time=#{s.screateTime},
+			</if>
+			<if test="s.supdateTime != null">
+                    supdate_time=#{s.supdateTime}
+			</if>
+		</set>
+		<where> 
+			<trim prefix="(" suffix=")" suffixOverrides="AND">
+			<if test="w.configId != null">
+                    config_id=#{w.configId}
+	                   AND 
+ 			</if>
+			<if test="w.configKey != null">
+                    config_key=#{w.configKey}
+	                   AND 
+ 			</if>
+			<if test="w.configValue != null">
+                    config_value=#{w.configValue}
+	                   AND 
+ 			</if>
+			<if test="w.remark != null">
+                    remark=#{w.remark}
+	                   AND 
+ 			</if>
+			<if test="w.status != null">
+                    status=#{w.status}
+	                   AND 
+ 			</if>
+			<if test="w.delFlag != null">
+                    del_flag=#{w.delFlag}
+	                   AND 
+ 			</if>
+			<if test="w.createUser != null">
+                    create_user=#{w.createUser}
+	                   AND 
+ 			</if>
+			<if test="w.updateUser != null">
+                    update_user=#{w.updateUser}
+	                   AND 
+ 			</if>
+			<if test="w.screateTime != null">
+                    screate_time=#{w.screateTime}
+	                   AND 
+ 			</if>
+			<if test="w.supdateTime != null">
+                    supdate_time=#{w.supdateTime}
+ 			</if>
+			</trim>
+		</where>
+	</update>
+
+	<delete id="delete" parameterType="io.ymq.fm.model.po.SysConfigPo">
+		delete from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</delete>
+
+	<select id="count" parameterType="java.util.Map" resultType="int">
+		select count(1) from
+		<include refid="Table_Name" />
+		<where>
+			<include refid="Base_Where" />
+		</where>
+	</select>
+
+	<select id="selectOne" parameterType="io.ymq.fm.model.po.SysConfigPo" resultMap="BaseResultMap">
+	  <include refid="Base_Select" />
+	</select>
+
+	<select id="selectList"  parameterType="io.ymq.fm.model.po.SysConfigPo" resultMap="BaseResultMap">
+	    <include refid="Base_Select" />
+	</select>
+		
+
+     <select id="selectForUpdate" parameterType="io.ymq.fm.model.po.SysConfigPo" resultMap="BaseResultMap" useCache="false">
+		 <include refid="Base_Select" />
+		for update
+	</select>
+	
+
+</mapper>
