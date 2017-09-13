@@ -13,6 +13,7 @@
 
 > #### 使用的时候需要按照`application.properties` 里面的注释配置即可
 
+![](https://raw.githubusercontent.com/souyunku/file-manager/master/file-manager/doc/index-0.png)
 ![](https://raw.githubusercontent.com/souyunku/file-manager/master/file-manager/doc/index-1.png)
 ![](https://raw.githubusercontent.com/souyunku/file-manager/master/file-manager/doc/index-2.png)
 ![](https://raw.githubusercontent.com/souyunku/file-manager/master/file-manager/doc/index-3.png)
