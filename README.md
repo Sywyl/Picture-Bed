@@ -3,10 +3,9 @@
 出于自用的目的，又找不到Java写的开源的程序，然后使用开源上传组件[ bootstrap-fileinput ](https://github.com/kartik-v/bootstrap-fileinput/)用 Spring Boot 写了一个图床
 
 > 目前支持：七牛云，阿里云
-> 
-> 演示地址： [http://yun.penglei.net](#)
-> 
-> GitHub： [https://github.com/souyunku/fileManager](https://github.com/souyunku/fileManager)
+
+
+> GitHub： [https://github.com/souyunku/file-manager](https://github.com/souyunku/file-manager)
 
 
 ### Configuration
