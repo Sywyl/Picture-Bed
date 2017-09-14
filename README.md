@@ -1,6 +1,6 @@
-# Simple open source image uploads
+# Open source Picture bed
 
-出于自用的目的，又找不到Java写的开源的程序，然后使用开源上传组件[ bootstrap-fileinput ](https://github.com/kartik-v/bootstrap-fileinput/)用 Spring Boot 写一个简单的后台小程序。
+出于自用的目的，又找不到Java写的开源的程序，然后使用开源上传组件[ bootstrap-fileinput ](https://github.com/kartik-v/bootstrap-fileinput/)用 Spring Boot 写了一个图床
 
 > 目前支持：七牛云，阿里云
 > 
