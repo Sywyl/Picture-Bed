@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * 描述:
+ * 描述:启动服务
  * author: yanpenglei
  * Date: 2017/9/5 12:16
  */
