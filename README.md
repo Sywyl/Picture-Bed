@@ -46,7 +46,7 @@
  - GitHub：[https://github.com/souyunku](https://github.com/souyunku)  
  - Segment Fault：[http://sf.gg/blog/souyunku](http://sf.gg/blog/souyunku)  
  - 版权归作者所有，转载请注明出处
- - Wechat：关注公众号，搜云库，分享技术，分享生活
+ - Wechat：关注公众号，搜云库技术团队，分享技术，分享生活
  
 ![关注公众号-搜云库](http://www.ymq.io/images/souyunku.png "搜云库")
 
